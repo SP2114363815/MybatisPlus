@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace等于mapper接口类的全限定名,这样实现对应 -->
+<mapper namespace="com.shaopeng.mapper.UserMapper">
+<!--    写的就是查询集合泛型 page的泛型-->
+<select id="queryByAge" resultType="user">
+    select *from user where age>#{age}
+</select>
+
+</mapper>
